@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waller</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game"></canvas>
+      <div id="overlay">
+        <div class="panel" id="menu">
+          <p class="eyebrow">online 2D shooter</p>
+          <h1>WALLER</h1>
+          <label class="name-label">
+            Name
+            <input id="player-name" maxlength="12" autocomplete="nickname" />
+          </label>
+          <div class="actions">
+            <button id="play-1v1" type="button">Play 1v1</button>
+            <button id="play-2v2" type="button">Play 2v2</button>
+          </div>
+          <button id="practice" class="ghost" type="button">Practice vs bots</button>
+          <p id="status" class="hint"></p>
+          <p class="controls">A/D move · Space jump · mouse aim · 1 wall · 2 bridge · 3 blast</p>
+        </div>
+        <div class="panel hidden" id="queue">
+          <p class="eyebrow">matchmaking</p>
+          <h2>Searching</h2>
+          <p id="queue-status" class="hint">Finding players…</p>
+          <button id="cancel-queue" class="ghost" type="button">Cancel</button>
+        </div>
+        <div class="panel hidden" id="result">
+          <p class="eyebrow">match over</p>
+          <h2 id="result-text">YOU WIN</h2>
+          <button id="result-menu" type="button">Back to menu</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
